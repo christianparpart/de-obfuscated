@@ -1,7 +1,7 @@
 all: program
 
 program: program.c
-	echo $(CC) -o $@ $^
+	$(CC) -o $@ $^
 
 clean:
 	rm -f program
