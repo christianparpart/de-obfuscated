@@ -1,9 +1,10 @@
 all: program
+	@./program || true
 
 program: program.c
-	$(CC) -o $@ $^
+	@$(CC) -o $@ $^
 
 clean:
-	rm -f program
+	@rm -f program
 
-.PHONY: all clean
+.PHONY: clean
