@@ -2,16 +2,16 @@
 #include <cstdio>
 
 int func(int t, int _, const char* a) {
-  if (t > 1) {                                      // #1
-    if (t < 3) {                                    // #2
+  if (t > 1) {
+    if (t < 3) {
       assert(t == 2);
       func(-79, -13, a + func(-87, 1 - _, func(-86, 0, a + 1) + a));
     }
-    if (t < _) {                                    // #3
+    if (t < _) {
       func(t + 1, _, a);
     }
-    if (func(-94, -27 + t, a) && t == 2) {          // #4
-      if (_ < 13) {                                 // #5
+    if (func(-94, -27 + t, a) && t == 2) {
+      if (_ < 13) {
         return func(2, _ + 1, "%s %d %d\n");
       } else {
         return 9;
@@ -19,8 +19,8 @@ int func(int t, int _, const char* a) {
     } else {
       return 16;
     }
-  } else if (t < 0) {                               // #6
-    if (t < -72) {                                  // #7
+  } else if (t < 0) {
+    if (t < -72) {
       return func(_, t, "@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l,+,/n{n"
                         "+,/+#n+,/#;#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l q#'+d"
                         "'K#!/+k#;q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw"
@@ -28,8 +28,8 @@ int func(int t, int _, const char* a) {
                         "'wk nw' iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'"
                         "c ;;{nl'-{}rw]'/+,}##'*}#nc,',#nw]'/+kd'+e}+;#'rdq#w! nr'/ ') }+"
                         "}{rl#'{n' ')# }'+}##(!!/");
-    } else if (t < -50) {                           // #8
-      if (_ == *a) {                                // #9
+    } else if (t < -50) {
+      if (_ == *a) {
         return putchar(a[31]);
       } else {
         return func(-65, _, a + 1);
@@ -37,10 +37,10 @@ int func(int t, int _, const char* a) {
     } else {
       return func((*a == '/') + t, _, a + 1);
     }
-  } else if (t > 0) {                               // #10
+  } else if (t > 0) {
     assert(t == 1);
     return func(2, 2, "%s");
-  } else if (*a != '/') {                           // #11
+  } else if (*a != '/') {
     assert(t == 0);
     func(0,
          func(-61,
