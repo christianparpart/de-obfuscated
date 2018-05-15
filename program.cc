@@ -50,5 +50,6 @@ int func(int t, int _, const char* a) {
 }
 
 int main() {
-  return func(1, 0, "");
+  func(1, 0, "");
+  return 0;
 }

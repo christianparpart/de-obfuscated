@@ -1,8 +1,8 @@
 all: program
-	@./program || true
+	@./program
 
-program: program.c
-	@$(CC) -o $@ $^
+program: program.cc
+	@$(CXX) -O0 -ggdb3 -std=c++17 -o $@ $^
 
 clean:
 	@rm -f program
