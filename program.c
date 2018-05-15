@@ -35,7 +35,7 @@ int func(int t, int _, char* a) {
     } else {
       return func((*a == '/') + t, _, a + 1);
     }
-  } else if (0 < t) {                               // #10
+  } else if (t > 0) {                               // #10
     return func(2, 2, "%s");
   } else if (*a != '/') {                           // #11
     func(0,
