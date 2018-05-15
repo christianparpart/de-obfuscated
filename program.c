@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int func(int t, int _, char* a) {
+int func(int t, int _, const char* a) {
   if (t > 1) {                                      // #1
     if (t < 3) {                                    // #2
       func(-79, -13, a + func(-87, 1 - _, func(-86, 0, a + 1) + a));
@@ -49,6 +49,6 @@ int func(int t, int _, char* a) {
   }
 }
 
-int main(int t, int _, char* a) {
-  return func(t, _, a);
+int main() {
+  return func(1, 0, "");
 }
