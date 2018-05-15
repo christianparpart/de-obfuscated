@@ -1,8 +1,10 @@
-#include <stdio.h>
+#include <cassert>
+#include <cstdio>
 
 int func(int t, int _, const char* a) {
   if (t > 1) {                                      // #1
     if (t < 3) {                                    // #2
+      assert(t == 2);
       func(-79, -13, a + func(-87, 1 - _, func(-86, 0, a + 1) + a));
     }
     if (t < _) {                                    // #3
@@ -36,8 +38,10 @@ int func(int t, int _, const char* a) {
       return func((*a == '/') + t, _, a + 1);
     }
   } else if (t > 0) {                               // #10
+    assert(t == 1);
     return func(2, 2, "%s");
   } else if (*a != '/') {                           // #11
+    assert(t == 0);
     func(0,
          func(-61,
               *a,
@@ -45,6 +49,7 @@ int func(int t, int _, const char* a) {
          a + 1);
     return 1;
   } else {
+    assert(t == 0 && *a == '/');
     return 1;
   }
 }
